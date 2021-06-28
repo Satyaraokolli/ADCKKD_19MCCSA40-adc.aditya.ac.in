@@ -1,0 +1,18 @@
+class reverse_even
+ {
+   public static void main(String[] args)
+   {
+     Scanner s=new Scanner(System.in);
+     System.out.println("enter highest even number");
+     int n=s.nextInt();
+     System.out.println("enter lowest even number");
+     int m=s.nextInt();
+     while(n>=m)
+     {
+       System.out.println(n);
+       n=n-2;
+       
+     }
+     
+   }
+ }
