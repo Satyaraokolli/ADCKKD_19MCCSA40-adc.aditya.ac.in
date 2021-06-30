@@ -17,7 +17,7 @@ import java.util.*;
      if(temp%sum==0)
       System.out.println("it is a harshad number");
      else
-      System.out.println("jt is not a harshad number");
+      System.out.println("it is not a harshad number");
     
    }
  }
