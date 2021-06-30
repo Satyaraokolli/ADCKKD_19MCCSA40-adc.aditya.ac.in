@@ -1,0 +1,23 @@
+import java.util.*;
+
+ class HarshadNumber
+ {
+   public static void main(String args[])
+   { 
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter a value");
+     int n=sc.nextInt();
+     int temp=n,sum=0,rem;
+     while(n>0)
+     {
+      rem=n%10;
+      sum=sum+rem;
+      n=n/10; 
+     }
+     if(temp%sum==0)
+      System.out.println("it is a harshad number");
+     else
+      System.out.println("jt is not a harshad number");
+    
+   }
+ }
