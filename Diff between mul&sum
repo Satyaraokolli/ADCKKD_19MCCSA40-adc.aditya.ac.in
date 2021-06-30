@@ -1,0 +1,29 @@
+import java.util.*;
+ class Diff
+ {
+   public static void main(String[] args)
+   {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter a value");
+     int n=sc.nextInt();
+        int sum=0;
+        int mul=1,rem,temp;
+        temp=n;
+        while(n>0)
+        {
+            rem=n%10;
+            mul=mul*rem;
+            //nn/10;
+            n/=10;
+        }
+        rem=0;
+        while(temp>0)
+        {
+            rem=temp%10;
+            sum=sum+rem;
+            temp=temp/10;
+        }
+        
+         System.out.println(mul-sum);  
+   }
+ }
