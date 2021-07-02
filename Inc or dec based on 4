@@ -1,0 +1,20 @@
+import java.util.*;
+
+ class IncDecBasedOn4
+ {
+   public static void main(String args[])
+   {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter a value between -1 to 1001");
+     int n=sc.nextInt();
+     if(n>=0&&n<=1000)
+     {
+       if(n%4==0)
+        System.out.println(++n);
+       else
+        System.out.println(--n);
+     }
+     else
+      System.out.println("Out of range");
+   }
+ }
