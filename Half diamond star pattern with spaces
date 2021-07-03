@@ -1,0 +1,63 @@
+import java.util.*;
+ class HalfDiamondPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the no of rows: ");
+        int n=sc.nextInt();        
+        for (int i=1;i<=n ;i++)
+        {
+            for (int j=1;j<=i;j++) 
+            { 
+            System.out.print("* "); 
+            }
+            for(int k=1;k<=n;k++) 
+             System.out.println(""); //loop for spaces
+         } 
+        for (int i=n-1;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("* ");
+            }
+            for(int k=1;k<=n;k++) 
+             System.out.println("");//loop for spaces
+        }
+        
+    }
+}
+
+
+Output:
+Enter the no of rows: 
+4
+* 
+
+
+
+* * 
+
+
+
+* * * 
+
+
+
+* * * * 
+
+
+
+* * * 
+
+
+
+* * 
+
+
+
+* 
+
+
+
+
