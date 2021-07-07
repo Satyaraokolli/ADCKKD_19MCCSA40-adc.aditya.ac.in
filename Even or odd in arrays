@@ -1,0 +1,38 @@
+import java.util.*;
+
+ class EvenOddArray
+ {
+   public static void main(String args[])
+   { 
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter size");
+     int n=sc.nextInt();
+     System.out.println("enter elements");
+     int a[]=new int[n];
+     int even=0,odd=0;
+     
+     for(int i=0;i<n;i++)
+     {
+       a[i]=sc.nextInt();
+       if(a[i]%2==0)
+       even++;
+       else
+       odd++;  
+     }
+     if((even*odd)%2==0)
+     System.out.println("even");
+     else
+     System.out.println("odd");
+   }
+ }
+
+
+
+Output:
+enter size
+5
+enter elements
+1 4 6 7 9
+even
+
+
