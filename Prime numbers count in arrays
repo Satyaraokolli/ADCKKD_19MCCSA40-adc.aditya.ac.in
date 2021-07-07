@@ -1,0 +1,42 @@
+import java.util.*;
+
+ class PrimeCountInArray
+ {
+   public static void main(String args[])
+   { 
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter size");
+     int n=sc.nextInt();
+     System.out.println("enter elements"); 
+     int count=0;
+     int c=0;
+     int i,j;
+     int a[]=new int[n];
+     for(i=0;i<n;i++)
+     {
+       a[i]=sc.nextInt();
+       c=0;
+       for(j=1;j<=a[i];j++)
+       {
+         if(a[i]%j==0)
+         c++;
+       }
+       if(c==2)
+       count++;
+     }
+    System.out.println("no of prime numbers="+count);
+   }
+ }
+
+
+Output:
+enter size
+5
+enter elements
+1
+2
+3
+6
+7
+no of prime numbers=3
+
