@@ -1,0 +1,41 @@
+import java.util.*;
+
+ class ElementsRightShift
+ {
+   public static void main(String args[])
+   { 
+     Scanner sc =new Scanner(System.in);
+     System.out.println("enter array size");
+     int n=sc.nextInt();
+     System.out.println("no of rotations");
+     int r=sc.nextInt();
+     System.out.println("enter elements");
+     int[] a=new int[n];
+     int[] b=new int[n];
+     int i,j;
+     for(i=0;i<n;i++)
+     {
+       a[i]=sc.nextInt();
+     }
+     for(j=0;j<n-1;j++)
+     {
+       b[j]=a[j+1];
+     }
+     b[n-1]=a[0];
+     for(i=0;i<n;i++)
+     {
+       System.out.print(b[i]+" ");
+     }
+   }
+ }
+
+
+
+Output:
+enter array size
+5
+no of rotations
+4
+enter elements
+10 20 30 40 50
+20 30 40 50 10 
