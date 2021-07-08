@@ -1,0 +1,68 @@
+import java.util.*;
+
+ class LeftRightRotations
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter row size");
+    int n=sc.nextInt();
+    System.out.println("enter left rotations");
+    int l=sc.nextInt();
+    System.out.println("enter right rotations");
+    int r=sc.nextInt();
+    System.out.println("enter array elements");
+    int []a=new int[n];
+    int i,j,k;
+    for(i=0;i<n;i++)
+    {
+      a[i]=sc.nextInt();
+    }
+    for(i=1;i<=l;i++)
+    {
+      int temp=a[0];
+      for(j=0;j<n-1;j++)
+      {
+        a[j]=a[j+1];
+      }
+      a[n-1]=temp;
+      for(k=0;k<n;k++)
+      {
+        System.out.print(a[k]+" ");
+      }
+      System.out.println("==>left rotation ");
+    }
+    for(i=1;i<=r;i++)
+    {
+      int temp=a[n-1];
+      for(j=n-1;j>0;j--)
+      {
+        //System.out.println(a[j+1]);
+        a[j]=a[j-1];
+       // System.out.println(" j="+j+" "+a[j+1]);
+      }
+      a[0]=temp;
+      for(k=0;k<n;k++)
+      {
+        System.out.print(a[k]+" ");
+      }
+      System.out.println("==>right rotation ");
+    }
+   }
+ }
+
+Output:
+enter row size
+5
+enter left rotations
+2
+enter right rotations
+3
+enter array elements
+1 2 3 4 5
+2 3 4 5 1 ==>left rotation 
+3 4 5 1 2 ==>left rotation 
+2 3 4 5 1 ==>right rotation 
+1 2 3 4 5 ==>right rotation 
+5 1 2 3 4 ==>right rotation 
+
