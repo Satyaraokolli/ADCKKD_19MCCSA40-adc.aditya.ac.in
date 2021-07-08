@@ -1,0 +1,70 @@
+import java.util.*;
+ class PlusOne
+ {
+   public static void main(String args[])
+   { 
+     Scanner sc=new Scanner(System.in);
+     System.out.println("enter row size");
+     int n=sc.nextInt();
+     int []a=new int[n];
+     System.out.println("enter array elements");
+     int i,j;
+     for(i=0;i<n;i++)
+    {
+      a[i]=sc.nextInt();
+    }
+    if(0<=a[n-1]&&a[n-1]<=8)
+    {
+      a[n-1]=a[n-1]+1;
+      for(i=0;i<n;i++)
+      {
+        System.out.print(a[i]+" ");
+      } 
+    }
+    else
+    {
+      int last=a[n-1]+1;
+      int l=(int)Math.log10(last);
+      int b[]=new int[n+l];
+      int rev=0;
+      while(last>0)
+      {
+        rev=rev*10+last%10;
+        last=last/10;
+      }
+      for(i=0;i<n-1;i++)
+      {
+        b[i]=a[i];
+      };
+      for(i=n-1;i<n+l;i++)
+      {
+        b[i]=rev%10;
+        rev/=10;
+      }
+      for(i=0;i<n+l;i++)
+      {
+        System.out.print(b[i]+" ");
+      } 
+    }
+   
+   } 
+ }
+
+
+
+Output-1:
+enter row size
+5
+enter array elements
+1 2 3 4 9999
+1 2 3 4 1 0 0 0 0 
+
+
+Output-2:
+enter row size
+4
+enter array elements
+1 0 0 2000
+1 0 0 2 0 0 1 
+
+
