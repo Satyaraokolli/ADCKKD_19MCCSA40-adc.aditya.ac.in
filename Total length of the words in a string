@@ -1,0 +1,26 @@
+import java.util.*;
+
+ class TotalWordsLength
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a String");
+    String str=sc.nextLine();
+    String ch[]=str.split(" ");
+    int len=0;
+    for(int i=0;i<ch.length;i++)
+    { 
+      len=len+ch[i].length();
+    }
+    System.out.println("size of total words in String="+len);
+   }
+ }
+
+
+Output:
+enter a String
+My name is satya
+size of total words in String=13
+
+Process finished.
