@@ -1,0 +1,37 @@
+import java.util.*;
+
+ class StringPalindromeOrNot
+ { 
+   public static void main(String args[]) 
+   {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a String");
+    String str=sc.nextLine();
+    int n=str.length();
+    char ch[]=str.toCharArray();
+    char c[]=new char[str.length()];
+    int i=0,j;
+    for(j=n-1;j>=0;j--)
+    {
+      c[j]=ch[i];
+      i++;
+    }
+    if(Arrays.equals(c,ch))
+    System.out.println("it is a palindrome");
+    else
+    System.out.println("it is not a palindrome");
+   }
+ }
+
+
+Output-1:
+enter a String
+madam
+it is a palindrome
+
+Output-2:
+enter a String
+12321
+it is a palindrome
+
+
