@@ -1,0 +1,43 @@
+import java.util.*;
+ class EvenOddSeperation
+ {
+   static int reverse(int x)
+   {
+     int rev=0;
+     while(x>0)
+     {
+       rev=rev*10+x%10;
+       x=x/10;
+     }
+     return rev;
+     
+   } 
+   public static void main(String args[])
+   {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a string");
+    String str=sc.nextLine();
+    int even=0,odd=0;
+    int rem;
+    int n=Integer.parseInt(str);
+    while(n>0)
+    {
+      rem=n%10;
+      if(rem%2==0)
+      even=even*10+rem;
+      else
+      odd=odd*10+rem;
+      n=n/10;
+    }
+    System.out.println(reverse(odd)+" "+reverse(even));
+   }
+ }
+
+
+Output:
+enter a string
+12345
+135 24
+
+
+
