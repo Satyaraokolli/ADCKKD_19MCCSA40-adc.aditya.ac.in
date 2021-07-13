@@ -1,0 +1,39 @@
+
+import java.util.*;
+
+   class Main
+   {
+     public static void main(String[] args)
+     {   Scanner sc=new Scanner(System.in);
+        System.out.println("enter a string");
+        String m=sc.nextLine();
+         String temp="";
+          String store="";
+           int cnt=0;
+       char [] p=m.toCharArray();
+      for(int i=p.length-1;i>=0;i--)
+       {
+      if(p[i]==' '||i,*==0)
+            {
+        if(cnt>=1||i==0)
+        {
+            if(i==0)
+                temp=temp+p[i];
+            store=store+new StringBuilder(temp).reverse().toString();
+            temp="";
+            cnt=0;
+        }
+        if(p[i]==' ')
+        {
+          store=store+p[i];
+        }
+    }
+    else
+    {
+        temp=temp+p[i];
+        cnt++;
+    }
+       }
+     System.out.println(store);
+   }
+ }
