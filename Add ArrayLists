@@ -1,0 +1,31 @@
+import java.util.*;
+
+ class AddArrayLists
+ {
+   public static void main(String args[])
+   { 
+    ArrayList<String> a=new ArrayList<String>(); 
+    ArrayList<String> b=new ArrayList<String>();
+    ArrayList<String> c=new ArrayList<String>();
+   
+      a.add("Good");
+      a.add("morning");
+      a.add("everyone");
+      b.add("Myname");
+      b.add("is");
+      b.add("Satyarao");
+      c.addAll(a);
+      c.addAll(b);
+      System.out.println(a);
+      System.out.println(b);
+      System.out.println(c);
+   }
+ }
+
+Output:
+
+[Good, morning, everyone]
+[Myname, is, Satyarao]
+[Good, morning, everyone, Myname, is, Satyarao]
+
+Process finished.
