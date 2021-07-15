@@ -1,0 +1,48 @@
+import java.util.*;
+
+ class RespectivePositions
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter array size");
+    int n=sc.nextInt();
+    int ch[]=new int[n];
+    int ch1[]=new int[n];
+    int i;
+    int even=0;
+    int odd=1;
+    System.out.println("enter same no. of odd and even  elements");
+    
+    for(i=0;i<n;i++)
+    {
+      ch[i]=sc.nextInt();
+    }
+    for(i=0;i<n;i++)
+    {
+      if(ch[i]%2==0)
+      {
+        ch1[even]=ch[i];
+        even=even+2; 
+      }
+      else
+      {
+        ch1[odd]=ch[i];
+        odd=odd+2;
+      }
+    }
+    System.out.println();
+    for(i=0;i<n;i++)
+    {
+      System.out.print(ch1[i]+" ");
+    }
+   }
+ }
+
+Output:
+enter array size
+8
+enter same no. of odd and even  elements
+1 2 3 4 5 6 7 8
+
+2 1 4 3 6 5 8 7 
