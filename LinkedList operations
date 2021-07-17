@@ -1,0 +1,118 @@
+import java.util.*;
+
+ class LinkedListOperations
+ {
+   public static void main(String args[])
+   {
+    Scanner sc=new Scanner(System.in) ;
+    LinkedList<Integer> l=new LinkedList<Integer>();
+    int ch;
+    do{
+      System.out.println("1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit");
+      System.out.println("enter your choice:");
+      ch=sc.nextInt();
+      switch(ch)
+      {
+        case 1:
+          System.out.println("enter a value:");
+          int f=sc.nextInt();
+          l.addFirst(f);
+          System.out.println(l);
+          break;
+        case 2:
+          System.out.println("enter a value:");
+          int e=sc.nextInt();
+          l.addLast(e);
+          System.out.println(l);
+          break;
+        case 3:
+          System.out.println("enter a position and value:");
+          int p=sc.nextInt();
+          int val=sc.nextInt();
+          l.set(p-1,val);
+          System.out.println(l);
+          break; 
+        case 4:
+          l.removeFirst();
+          System.out.println(l);
+          break;
+        case 5:
+          l.removeLast();
+          System.out.println(l);
+          break;
+        case 6:
+          System.out.println("enter the postion:");
+          int pos=sc.nextInt();
+          l.remove(pos-1);
+          System.out.println(l);
+          break;
+        case 7:
+          System.out.println(l);
+          break;
+        case 8:
+          ch=9;
+          break;
+          default:
+            System.out.println("invalid choice");
+            System.out.println();
+            ch=1;  
+      }
+    }
+    while(ch<=8);
+   }
+ }
+ 
+ Output:
+ 
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+1
+enter a value:
+30
+[30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+1
+enter a value:
+20
+[20, 30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+1
+enter a value:
+10
+[10, 20, 30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+2
+enter a value:
+40
+[10, 20, 30, 40]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+3
+enter a position and value:
+4 35
+[10, 20, 30, 35]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+4
+[20, 30, 35]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+5
+[20, 30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+6
+enter the postion:
+1
+[30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+7
+[30]
+1.addFirst 2.addLast 3.PositionInsert 4.removeFirst 5.removeLast 6.positionDelete 7.Display 8.exit
+enter your choice:
+8
+
