@@ -1,0 +1,41 @@
+import java.util.*;
+
+ class Duplicate 
+ {
+   public static void main(String args[])
+   { 
+    HashMap <Integer,Integer> h=new HashMap<Integer,Integer>();
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter array size");
+    //System.out println("enter array size");
+    int n=sc.nextInt();
+    int a[]=new int[n];
+   System.out.println("enter array elements");
+    int i;
+    for(i=0;i<n;i++)
+    {
+      a[i]=sc.nextInt();
+    }
+    for(i=0;i<n;i++)
+    {
+      if(h.containsKey(a[i]))
+        h.put(a[i],h.get(a[i])+1);
+      else
+        h.put(a[i],1);
+    }
+    for(Map.Entry<Integer,Integer>j:h.entrySet())
+    {
+      if(j.getValue()>1)
+      System.out.println(j.getKey()+"-->"+j.getValue());
+    }
+  //  System.out.println(h);
+   }
+ }
+enter array size
+10
+enter array elements
+3 4 4 3 2 6 2 7 9 1
+2-->2
+3-->2
+4-->2
+
