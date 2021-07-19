@@ -1,0 +1,32 @@
+import java.util.*;
+
+ class HashMaps
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+   HashMap<Integer, String> h =new HashMap<Integer, String>();  
+    System.out.println("enter HashMap size");
+    int n=sc.nextInt();
+    int i;
+    for(i=0;i<n;i++)
+    {
+      System.out.println("enter key and value");
+      h.put(sc.nextInt(),sc.next());
+    }
+    System.out.println(h);
+   }
+ }
+Output:
+enter HashMap size
+4
+enter key and value
+3 Satya
+enter key and value
+2 John
+enter key and value
+5 pavan
+enter key and value
+1 ram
+{1=ram, 2=John, 3=Satya, 5=pavan}
+
