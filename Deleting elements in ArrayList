@@ -1,0 +1,36 @@
+import java.util.*;
+
+ class Deleting
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter ArrayLlist size");
+    int n=sc.nextInt();
+    System.out.println("enter ArrayList elements");
+    int i;
+    ArrayList<Integer> a=new ArrayList<Integer>();
+      ArrayList<Integer> b=new ArrayList<Integer>();
+    for(i=0;i<n;i++)
+    {
+      a.add(sc.nextInt());
+    }
+    System.out.println("enter a k value");
+    int k=sc.nextInt();
+    for(i=0;i<n;i++)
+    {
+      if(k<(a.get(i)))
+      b.add(a.get(i));
+    }
+    System.out.println(b);
+   }
+ }
+Output:
+enter ArrayLlist size
+6
+enter ArrayList elements
+2 6 4 8 1 9
+enter a k value
+5
+[6, 8, 9]
+
