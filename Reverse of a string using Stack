@@ -1,0 +1,27 @@
+import java.util.*;
+
+ class ReverseString
+ {
+   public static void main(String args[])
+   {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a string");
+    String str=sc.next();
+    char ch[]=str.toCharArray();
+    Stack<Character> st=new Stack<>();
+    int n=ch.length;
+    int i;
+    for(i=0;i<n;i++)
+    {
+      st.push(ch[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+      System.out.print(st.pop());
+    }
+   }
+ }
+Output:
+enter a string
+Satya
+aytaS
