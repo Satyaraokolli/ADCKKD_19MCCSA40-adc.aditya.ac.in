@@ -1,0 +1,29 @@
+import java.util.*;
+class FactorialTrailingZero
+{
+ public static void main(String args[])
+ {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter a value");
+   int n=sc.nextInt();
+   int i;
+        int fact=1;
+        for(i=n;i>=1;i--)
+        {
+            fact=fact*i;
+            
+	}
+        System.out.println("factorial="+fact);
+        if(fact%10==0)
+            System.out.println("0");
+        else
+	    System.out.println("no trailing zero");
+        
+ }
+}
+
+Output:
+enter a value
+5
+factorial=120
+0
