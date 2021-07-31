@@ -1,0 +1,90 @@
+import java.util.*;
+class commonfactsum
+{
+    public static void main(String args[])
+    {
+        int i,j,temp,t;
+        int sum=0;
+        int q=2;
+        TreeSet<Integer> a=new TreeSet<Integer>();
+        ArrayList<Integer> x=new ArrayList<Integer>();
+        ArrayList<Integer> y=new ArrayList<Integer>();
+        Scanner sc=new Scanner(System.in);
+        
+        while(q>0)
+        {
+            System.out.println("\nenter a element");
+            int n=sc.nextInt();
+            t=n;
+            System.out.println("prime factors of "+n+": ");
+            while(n%2==0)
+            {
+                a.add(2);
+                System.out.print("2"+" ");
+                n=n/2;
+            }
+            for(i=3;i<=Math.sqrt(n);i+=2)
+            {
+                while(n%i==0)
+                {
+                    a.add(i);
+                   System.out.print(i+" ");
+                    n=n/i;
+                }
+            }
+            if(n>2)
+            {
+               System.out.print(n+" ");
+                a.add(n);
+            }
+            temp=a.size();
+            if(q==2)
+            {
+            x=new ArrayList<Integer>(a);
+            System.out.println("\nprime factors of "+t+" without duplicates:");
+            for(int ele:x)
+            {
+            System.out.print(ele+" ");
+            }
+            }
+            else
+            {
+            y=new ArrayList<Integer>(a);
+            System.out.println("\nprime factors of "+t+"without duplicates:");
+            for(int e:y)
+            {
+            System.out.print(e+" ");
+            }
+            }
+            a.clear();
+            q--;
+        }
+        sum=0;
+        for(i=0;i<x.size();i++)
+        {
+            for(j=0;j<y.size();j++)
+            {
+                if(x.get(i)==y.get(j))
+                {
+                   sum=sum+x.get(i);
+                } 
+            }
+        }
+        System.out.println("\nsum="+sum);
+    }
+}
+
+Output:
+enter a element
+12
+prime factors of 12:
+2 2 3
+prime factors of 12 without duplicates
+2 3
+enter a element
+30
+prime factors of 30:
+2 3 5
+prime factors of 30without duplicates
+2 3 5
+sum=5
