@@ -1,0 +1,40 @@
+import java.util.*;
+class addarrayelements
+{
+    public static void main(String args[])
+    {
+        int n,a[],i;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter array size");
+        n=sc.nextInt();
+        a=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int prefix[]=new int[n];
+        prefix[0]=a[0];
+        for(i=1;i<n;i++)
+        {
+            prefix[i]=prefix[i-1]+a[i];
+        }
+        System.out.println("enter index range");
+        int first=sc.nextInt();
+        int last=sc.nextInt();
+         if(first==0)
+            System.out.println("sum="+prefix[last]);
+        else
+            System.out.println("sum="+(prefix[last]-prefix[first-1]));
+        
+    }
+}
+
+Output:
+enter array size
+6
+enter array elements
+4 -1 3 5 -2 7
+enter index range
+1 5
+sum=12
