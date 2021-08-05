@@ -1,0 +1,51 @@
+import java.util.*;
+class updateandadd
+{
+    public static void main(String args[])
+    {
+        int n,a[],i,first,last;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter array size");
+        n=sc.nextInt();
+        a=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+            a[i]=sc.nextInt();
+        int b[]=Arrays.copyOf(a,n);
+        System.out.println("enter a element we want to add");
+        int x=sc.nextInt();
+        System.out.println("enter index range to add the element");
+        first=sc.nextInt();
+        last=sc.nextInt();
+        for(i=first;i<=last;i++)
+        {
+            b[i]=b[i]+x;
+        }
+        System.out.println("enter the range we want to add and display");
+        int p=sc.nextInt();
+        int q=sc.nextInt();
+        int sum=0,add=0;
+        for(i=p;i<=q;i++)
+        {
+            add=add+a[i];
+            sum=sum+b[i];
+        }
+        System.out.println("sum of the elements of given range in normal array="+add);
+        System.out.println("sum of the elements of given range in updated array="+sum);
+        
+    }
+}
+
+Output:
+enter array size
+5
+enter array elements
+1 2 3 4 5 
+enter a element we want to add
+10
+enter index range to add the element
+2 4
+enter the range we want to add and display
+0 4
+sum of the elements of given range in normal array=15
+sum of the elements of given range in updated array=45
