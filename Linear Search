@@ -1,0 +1,47 @@
+import java.util.*;
+class Linear
+{
+    public static void main(String args[])
+    {
+        int n,a[],flag=0,loc=0,i,se;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter array size");
+        n=sc.nextInt();
+        a=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        System.out.println("enter searching element");
+         se=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(se==a[i])
+            {
+                flag=1;
+                loc=i+1;
+                break;
+           
+            }  
+        }
+          if(flag==1)
+            {
+               System.out.println("element found"); 
+               System.out.println("location="+loc);
+            }
+            else
+            {
+                System.out.println("element not found");
+            }
+    }
+}
+
+
+Output:
+enter array size
+5
+enter array elements
+4 2 5 7 9
+enter searching element
+7
+element found
+location=4
