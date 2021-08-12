@@ -1,0 +1,40 @@
+import java.util.*;
+class ReverseElements
+{
+    public static void main(String args[])
+    {
+        int i,a[];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter array size");
+        int n=sc.nextInt();
+        a=new int[n];
+        System.out.println("enter array elements");
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        System.out.println("Array elements are");
+        printArray(a,0);
+    }
+     static void printArray(int arr[],int i)
+     {
+         int n=arr.length;
+        if(i==n)
+            return;
+        else
+        {
+             System.out.print(arr[i]+" ");
+             printArray(arr,i+1);
+            
+        }
+        
+     }
+}
+
+Output:
+enter array size
+5
+enter array elements
+42 34 64 23 36
+Array elements are
+42 34 64 23 36 
